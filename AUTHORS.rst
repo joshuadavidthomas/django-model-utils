@@ -25,13 +25,16 @@
 | Donald Stufft <donald.stufft@gmail.com>
 | Douglas Meehan <dmeehan@gmail.com>
 | Emin Bugra Saral <eminbugrasaral@me.com>
+| Enrique Matías Sánchez <cronopios@gmail.com>
 | Eran Rundstein <eranrund@gmail.com>
 | Eugene Kuznetsov <atorich@gmail.com>
 | Felipe Prenholato <felipe.rafael@pdg.com.br>
 | Filipe Ximenes <filipeximenes@gmail.com>
+| Florian Alu <fla@grapps.fr>
 | Germano Massullo <github.com/Germano0>
 | Gregor Müllegger <gregor@muellegger.de>
 | Guilherme Devincenzi <github.com/gdevincenzi>
+| Guilherme Crocetti <github.com/gmcrocetti>
 | Hanley <hanley@wayup.com>
 | Hanley Hansen <hanleyhansen@gmail.com>
 | Harry Moreno <morenoh149@gmail.com>
@@ -43,6 +46,7 @@
 | Jannis Leidel <jannis@leidel.info>
 | Javier Garcia Sogo <jgsogo@gmail.com>
 | Jeff Elmore <jelmore@lexile.com>
+| Joe Riddle <joeriddles10@gmail.com>
 | John Vandenberg <jayvdb@gmail.com>
 | Jonathan Sundqvist <sundqvist.jonathan@gmail.com>
 | João Amaro <joaoamaro70@gmail.com>
@@ -51,6 +55,7 @@
 | Lucas Wiman <lucaswiman@counsyl.com>
 | Martey Dodoo <martey@mobolic.com>
 | Matthew Schinckel <matt@schinckel.net>
+| Matthieu Rigal <matt.rigal@gmail.com>
 | Michael van Tellingen <m.vantellingen@lukkien.com>
 | Mike Bryant <m@ocado.com>
 | Mikhail Silonov <m.silonov@corp.mail.ru>
@@ -100,3 +105,4 @@
 | Éric Araujo <merwok@netwok.org>
 | Őry Máté <ory.mate@cloud.bme.hu>
 | Nafees Anwar <h.nafees.anwar@gmail.com>
+| meanmail <github@meanmail.dev>

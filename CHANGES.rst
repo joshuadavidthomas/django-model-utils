@@ -1,13 +1,97 @@
 Changelog
 =========
 
-Unreleased
-----------
+To be released
+------------------
+- Add support for `Python 3.13` (GH-#628)
+
+5.0.0 (2024-09-01)
+------------------
+- Add formal support for `Django 5.1`
+- Remove MonitorField deprecation warning. `None` - instead of
+  `django.utils.timezone.now` will be used when nullable and no default provided (GH-#599)
+- Add deprecation warning for MonitorField. The default value will be `None`
+  instead of `django.utils.timezone.now` - when nullable and without a default.
+- Add Brazilian Portuguese translation (GH-#578)
+- Don't use `post_init` signal for initialize tracker
+- Make `contribute_to_class()` in `StatusField`, `MonitorField` and `SplitField`
+  forward additional arguments to Django
+- `SplitField` no longer accepts `no_excerpt_field` as a keyword argument
+- Make `soft` argument to `SoftDeletableModel.delete()` keyword-only
+- `JoinManager` and `JoinManagerMixin` have been deprecated;
+  please use ``JoinQueryset.as_manager()`` instead
+- Change `SoftDeletableQuerySetMixin.delete` to replicate Django's API.
+
+4.5.1 (2024-05-02)
+------------------
+
+- Remove `JoinQueryset.get_quoted_query()` by @mthuurne (GH-#618)
+
+4.5.0 (2024-04-01)
+------------------
+
+- Don't use `post_init` signal for initialize tracker by @meanmail in -  (GH-#556)
+- clarify docs for managers of SoftDeletableModel by @tadamcz in -  (GH-#589)
+- [pre-commit.ci] pre-commit autoupdate by @pre-commit-ci in -  (GH-#575)
+- `Language Support` - Add translations for Brazilian Portuguese by @gmcrocetti in -  (GH-#578)
+- Remove dead `init_deferred_fields` method by @joecox in -  (GH-#580)
+- Update where `ConnectionDoesNotExist` is imported from by @mthuurne in -  (GH-#566)
+- Remove arguments from `InheritanceQuerySetMixin._clone()` by @mthuurne in -  (GH-#567)
+- Allow running tests using sqlite by @jayvdb in -  (GH-#516)
+- `MonitorField` - Change default to None when the field is nullable  by @gmcrocetti in -  (GH-#577)
+- Explicitly re-export names from `__init__` module by @mthuurne in - (GH-#591)
+- Switch from freezegun to time-machine. by @adamchainz in -  (GH-#510)
+- USE_TZ = True by @foarsitter in -  (GH-#593)
+- Remove redundant definition of `JoinManager` from tests by @mthuurne in -  (GH-#594)
+- Pass reason to `@skip` decorator by @mthuurne in -  (GH-#595)
+- Resolve name clash among test models by @mthuurne in -  (GH-#596)
+- Remove obsolete `tests.signals` module by @mthuurne in -  (GH-#597)
+- Remove obsolete test models by @mthuurne in -  (GH-#598)
+- Postgresql docker container for local development by @foarsitter in -  (GH-#563)
+- [pre-commit.ci] pre-commit autoupdate by @pre-commit-ci in -  (GH-#602)
+- Add issue-manager by @foarsitter in -  (GH-#600)
+- Translation files by @foarsitter in -  (GH-#608)
+
+4.4.0 (2024-02-10)
+------------------
+
+- Add support for `Python 3.11` (GH-#545)
+- Add support for `Python 3.12` (GH-#545)
+- Drop support for `Python 3.7` (GH-#545)
+- Add support for `Django 4.2`
+- Add support for `Django 5.0`
+- Remove ``SaveSignalHandlingModel``. This model used a modified copy of the internal Django method `Model.save_base()`
+  and had not been updated for upstream bug fixes changes since its addition.
+- Add Swedish translation
+- Use proper column name instead of attname (GH-#573)
+- Fix ValueError when calling prefetch_related for tracked ForeignKey fields
+
+4.3.1 (2022-11-15)
+------------------
+
+- Confirm support for `Django 4.0`
+- Add Spanish translation
+- Add French translation
+- Drop Django 1.7 workaround from `select_subclasses()`
+- Drop support for `Django < 3.2`
+- Drop support for `Python 3.6`
+- Confirm support for `Django 4.1`
+
+4.3.0
+-----
+
+- Never released due to packaging issues.
+
+4.2.0 (2021-10-11)
+------------------
+
 - Add support for `Django 3.2`
 - Drop support for `Django 3.0`
-
+- Add support for `Python 3.10`
 - Added urlsafe token field.
 - Introduce context manager for FieldTracker state reset (GH-#491)
+- Fix performance regression of FieldTracker on FileField subclasses on Django 3.1+
+  (GH-#498)
 
 4.1.1 (2020-12-01)
 ------------------
@@ -20,6 +104,7 @@ Unreleased
 ------------------
 
 **Breaking changes:**
+
 - `FieldTracker` now marks fields as not changed after `refresh_from_db`
   respecting `fields` argument (GH-#404)
 - `FieldTracker` now respects `update_fields` changed in overridden `save()`
@@ -29,6 +114,7 @@ Unreleased
   methods (GH-#404)
 
 **Other changes:**
+
 - Update InheritanceQuerySetMixin to avoid querying too much tables
 - TimeStampedModel now automatically adds 'modified' field as an update_fields
   parameter even if it is forgotten while using save()
@@ -228,7 +314,7 @@ Unreleased
   for the report.  Thanks Matthew Schinckel for the fix.  Merge of GH-130,
   fixes GH-83.
 
-.. _IPython: http://ipython.org/
+.. _IPython: https://ipython.org/
 
 
 2.0.3 (2014.03.19)
